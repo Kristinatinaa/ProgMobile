@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 this@MainActivity,
                 HelpActivity::class.java)
             startActivity(intent)
+            finish()
         })
 }
 }

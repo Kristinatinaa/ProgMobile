@@ -14,9 +14,47 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".EditData"
+            android:exported="false" />
+        <activity
+            android:name=".SampleRecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".SampleListView"
+            android:exported="false" />
+        <activity
+            android:name=".SampleList"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DutaTani"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TableActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConstraintActivity"
+            android:exported="false" />
+        <activity
             android:name=".HelpActivity"
             android:exported="true" />
-            android:label ="help activity/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
