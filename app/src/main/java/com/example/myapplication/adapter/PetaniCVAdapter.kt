@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.Petani
 
-class PetaniAdapter (val petani: List<Petani>):
+class PetaniCVAdapter (val petani: List<Petani>):
     RecyclerView.Adapter<PetaniAdapter.PetaniHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetaniAdapter.PetaniHolder {
         return PetaniHolder( LayoutInflater.from(parent.context).inflate(R.layout.rv_item_dutatani, parent, false))
