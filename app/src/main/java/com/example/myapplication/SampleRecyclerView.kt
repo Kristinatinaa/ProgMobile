@@ -17,7 +17,12 @@ class SampleRecyclerView : AppCompatActivity() {
         setContentView(R.layout.activity_sample_recycler_view)
         rvSample = findViewById(R.id.rvLatihan)
 
-
+        lPetani = listOf(
+            Petani(user = "R1", nama = "Kristina", jumlahLahan = "100", identifikasi = "50", tambahLahan = "40"),
+            Petani(user = "R2", nama = "Kristina", jumlahLahan = "100", identifikasi = "50", tambahLahan = "40"),
+            Petani(user = "R3", nama = "Kristina", jumlahLahan = "100", identifikasi = "50", tambahLahan = "40"),
+            Petani(user = "R4", nama = "Kristina", jumlahLahan = "100", identifikasi = "50", tambahLahan = "40")
+        )
         petaniAdapter = PetaniAdapter(lPetani)
 
         rvSample.apply{

@@ -9,12 +9,12 @@ import com.example.myapplication.R
 import com.example.myapplication.model.Petani
 
 class PetaniCVAdapter (val petani: List<Petani>):
-    RecyclerView.Adapter<PetaniAdapter.PetaniHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetaniAdapter.PetaniHolder {
-        return PetaniHolder( LayoutInflater.from(parent.context).inflate(R.layout.rv_item_dutatani, parent, false))
+    RecyclerView.Adapter<PetaniCVAdapter.PetaniHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetaniCVAdapter.PetaniHolder {
+        return PetaniHolder( LayoutInflater.from(parent.context).inflate(R.layout.cv_item_petani, parent, false))
     }
 
-    override fun onBindViewHolder(holder: PetaniAdapter.PetaniHolder, position: Int) {
+    override fun onBindViewHolder(holder: PetaniCVAdapter.PetaniHolder, position: Int) {
         holder.bindPetani(petani[position])
     }
 

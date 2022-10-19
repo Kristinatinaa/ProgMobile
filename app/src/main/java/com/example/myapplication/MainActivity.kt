@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnInput : Button
     lateinit var edNama : EditText
     lateinit var btHelp : Button
+    lateinit var btnCardView: Button
+    lateinit var btnRecyclerView: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         btnInput = findViewById(R.id.btn_ambil_nama)
         edNama = findViewById(R.id.ed_input_nama)
         btHelp = findViewById(R.id.btn_help)
+
+
         btnInput.setOnClickListener(View.OnClickListener { view ->
             var strTmp = edNama.text.toString()
             tvMain.text = strTmp
@@ -38,6 +42,17 @@ class MainActivity : AppCompatActivity() {
                 HelpActivity::class.java)
             startActivity(intent)
             finish()
+        })
+        btnCardView = findViewById(R.id.btnCardView)
+        btnRecyclerView = findViewById(R.id.btnSampleRV)
+
+        btnCardView.setOnClickListener(View.OnClickListener{view->
+            var intent = Intent(this@MainActivity,SampleCardView::class.java)
+            startActivity(intent)
+        })
+        btnRecyclerView.setOnClickListener(View.OnClickListener{view->
+            var intent = Intent(this@MainActivity,SampleRecyclerView::class.java)
+            startActivity(intent)
         })
 }
 }
