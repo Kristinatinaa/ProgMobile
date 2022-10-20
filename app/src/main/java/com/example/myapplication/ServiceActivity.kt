@@ -14,7 +14,7 @@ class ServiceActivity : AppCompatActivity() {
         btnGetAPI = findViewById(R.id.btnGetAPI)
 
         btnGetAPI.setOnClickListener(View.OnClickListener{view->
-            var intent = Intent(this@ServiceActivity,SampleRecyclerView::class.java)
+            var intent = Intent(this@ServiceActivity,GetAPIActivity::class.java)
             startActivity(intent)
         })
     }

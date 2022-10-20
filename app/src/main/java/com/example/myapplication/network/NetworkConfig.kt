@@ -9,9 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 class NetworkConfig {
     // set interceptor
@@ -37,4 +35,6 @@ interface Users {
     fun getUsers(): Call<List<ResponseItem>>
     @POST("api/progmob/mhs/create")
     fun addMhs(@Body req : ResponseMhsItem): Call<ResponseMhs>
+    @DELETE("api/progmob/mhs/nim_progmob")
+    fun deleteMhs(@Path("id") id : Int): Call<ResponseMhs>
 }
